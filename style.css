@@ -1,0 +1,198 @@
+html,body{
+    height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color:#ffffff;/*背景色*/
+}
+
+#wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+}
+#header{
+    position: fixed;
+    height: 60px;
+    background-color: #4f0971;
+    width: 100vw;
+    margin: 0;
+    line-height:0;
+    top:0;
+    left:0;
+    box-shadow: 2px 2px 4px;
+    z-index:5;
+    display: flex;
+    justify-content: space-between;
+}
+#text{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#login{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+    box-shadow: 0 0 8px #4f0971;
+    background-color: #ffffff;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+#login input[type="text"], #login input[type="password"]{
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 200px;
+    padding: 14px 10px;
+    border: 2px solid #e2e2e2;
+    transition: 0.25s;
+}
+#login input[type="text"]:focus, #login input[type="password"]:focus{
+    outline: none;
+    border-color: #4f0971;
+}
+
+#login input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 40px;
+    box-shadow: 0 0 2px gray;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
+}
+#login input[type="submit"]:hover{
+    background: #4f0971;
+    color: #ffffff;
+}
+#main_content{
+    width: 80vw;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    display: block;
+    box-shadow: 0 0 8px #4f0971;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+#button_detail{
+    display: flex;
+    justify-content: center;
+}
+#input input[type="text"]{
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 200px;
+    padding: 40px 60px;
+    font-size: 30px;
+    border: 2px solid #e2e2e2;
+    transition: 0.25s;
+}
+#input input[type="text"]:focus{
+    outline: none;
+    border-color: #4f0971;
+}
+
+#input input[type="button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 40px;
+    box-shadow: 0 0 2px gray;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
+}
+#input input[type="button"]:hover{
+    background: #4f0971;
+    color: #ffffff;
+}
+#main_1{
+    height: 350px;
+}
+#main_2{
+    height: 350px;
+}
+#main_3{
+    height: 350px;
+}
+#accept{
+    height: 350px;
+}
+.fadein{
+    animation: fadein 0.75s;
+}
+.fadeout{
+    animation: fadeout 0.75s;
+}
+.fadein_simple{
+    animation: fadein_simple 0.75s;
+}
+.fadeout_simple{
+    animation: fadeout_simple 0.75s;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    50%{
+        display: block;
+        height: 350px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 350px;
+        display: block;
+    }
+}
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+        height: 350px;
+        display: block;
+    }
+    50%{
+        opacity: 0;
+        height: 350px;
+    }
+    100% {
+        opacity: 0;
+        height: 0px;
+    }
+}
+@keyframes fadein_simple {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        opacity: 1;
+    }
+}@keyframes fadeout_simple {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
